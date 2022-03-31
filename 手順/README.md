@@ -5,7 +5,7 @@
 * Youtube Live Streaming APIはリアルタイムで取るためのもの．（アーカイブからは取れない）
 * 2018 Seleniumでとる方法が出回る．http://watagassy.hatenablog.com/entry/2018/10/06/002628
 * 2018--2020/6 静的HTMLで取れることがわかる．http://watagassy.hatenablog.com/entry/2018/10/08/132939 https://note.com/or_ele/n/n5fc139ff3f06
-* 2020/10 静的HTMLでは取れなくなる．Seleniumに戻る．矢吹研で使っていた方法（Ubuntu 18:04）では，Chromiumが古く，チャットは取れなくなっている
+* 2020/10 静的HTMLでは取れなくなる．Seleniumに戻る．
 
 そこで，Dockerで動かしたブラウザからデータを取るようにする．
 
@@ -13,10 +13,7 @@
 
 すべでWSLのUbuntuで作業する．（好きな作業場所をエクスプローラで開き，アドレスバーで`bash`エンター）
 
-（1行目はラボ内限定）
-
 ```bash
-sudo bash -c "echo 'Acquire::http::Proxy \"http://10.100.192.4:3142/\";' >> /etc/apt/apt.conf.d/02proxy"
 sudo apt update
 sudo apt install -y python3-selenium
 pip3 install bs4 lxml pandas matplotlib
